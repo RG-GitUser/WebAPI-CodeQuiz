@@ -1,11 +1,5 @@
-h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-font-family: 'Encode Sans SC', sans-serif;
-font-family: 'Overpass', sans-serif;
-font-family: 'Sigmar One';
+
+body{
+    font-family: 'Quicksand', sans-serif;
 }
 
-
-.button { 
-    float:right;
-}
