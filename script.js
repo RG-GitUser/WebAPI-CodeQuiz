@@ -1,16 +1,36 @@
-//variables
+//declaring DOM variables
+
+var timerElement = document.querySelector(".timer-count");
+var startButton = document.querySelector(".start-button");
+
+var winCounter = 0;
+var loseCounter = 0;
+var timer;
+var timerCount;
 
 
 
+//setting functions
 
+function startGame() {
+    timerCount = 10;
+
+startButton.disabled = true;
+renderBlanks()
+startTimer()
+}
+
+
+function correctAnswer() {
+wordBlank.textcontent = "Correct answer!"
+winCounter++
+startButton.disabled = false;
+setWins()
+}
 
 //questions
 
-let question = {
-    "Question One": 'What is JavaScripts role in the development process?.',
-    options: ['A - JavaScript enables functionality'],
-    correctAnswer:0
-}; 
+
 
 
 
