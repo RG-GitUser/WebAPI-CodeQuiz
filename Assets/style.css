@@ -3,3 +3,27 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+
+
+.container-score{
+    font-size: 16px;
+    height: 50px;
+    margin-top: 30px;
+    margin-right: 500px;
+}
+
+button {
+
+    color: #13293d;
+    cursor: pointer;
+    font-size: 1em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 10px 32px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+}
