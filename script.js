@@ -24,23 +24,31 @@ function init() {
     getlosses();
 }
 
+function correctAnswer() {
+    wordBlank.textcontent = "Correct answer!"
+    winCounter++
+    startButton.disabled = false;
+    setWins()
+    }
 
+
+//setting the timer 
 
 function startGame() {
-     timerCount = 10;
+    timerCount = 10;
 
-     startButton.disabled = true;
+    startButton.disabled = true;
 renderBlanks()
 startTimer()
 }
 
 
-function correctAnswer() {
-wordBlank.textcontent = "Correct answer!"
-winCounter++
-startButton.disabled = false;
-setWins()
-}
+
+
+
+
+
+
 
 //questions
 
