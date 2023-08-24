@@ -1,4 +1,4 @@
-//declaring DOM variables
+//declaring variables
 var win = document.querySelector(".win");
 var lose = document.querySelector(".lose");
 var timerElement = document.querySelector(".timer-count");
@@ -30,30 +30,9 @@ function startGame() {
      timerCount = 10;
 
      startButton.disabled = true;
+renderBlanks()
 startTimer()
 }
-
-
-function quitGame() {
-
-}
-
-
-
-
-var counter = 10;
-var interval = setInterval(function() {
-    counter--;
-    // Display 'counter' wherever you want to display it.
-    if (counter <= 0) {
-     		clearInterval(interval);
-      	$('#timer').html("<h3>Count down complete</h3>");  
-        return;
-    }else{
-    	$('#time').text(counter);
-      console.log("Timer --> " + counter);
-    }
-}, 1000);
 
 
 function correctAnswer() {
