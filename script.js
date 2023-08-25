@@ -1,9 +1,6 @@
 //declaring variables
-var win = document.querySelector(".win");
-var lose = document.querySelector(".lose");
-var timerElement = document.querySelector(".timer-count");
-var startButton = document.querySelector(".start-button");
-var seconds = math.floor((distance % (1000 * 60)) / 1000);
+var timer; 
+var ele = document.getElementById('timer')
 
 
 
@@ -15,9 +12,24 @@ var timerWin
 
 var answers = ["A","B","C"];
 
+//setting the timer 
+
+(function (){
+    var sec = 0; 
+    timer = setInterval(()=>{
+        ele.innerHTML = '00:'+sec;
+        sec ++; 
+    }, 1000)
+})()
+
+function pause(){
+    clearInterval(timer); 
+}
+  
 
 
-//setting functions
+
+//Win/Lose 
 
 function init() {
     getWins();
@@ -32,23 +44,6 @@ function correctAnswer() {
     }
 
 
-//setting the timer 
-
-function startGame() {
-    timerCount = 10;
-
-    startButton.disabled = true;
-renderBlanks()
-startTimer()
-}
-
-
-
-
-
-
-
-
 
 //questions
 
@@ -56,7 +51,8 @@ startTimer()
 
 //event listeners
 
-startButton.addEventListener("click", startGame);
+
+
 
 document.getElementById("secs").innerHTML = seconds + "s"
 document.getElementById('button').onclick = function() {
