@@ -11,12 +11,13 @@
 
 </head>
 
+<heading class = "intro"> 
+ <h1> JavaScript Quiz! </h1>
 
-<h1> JavaScript Quiz! </h1>
-
-<p>In this game, you will attempt to answer the following questions related to JavaScript.<br />
+ <p>In this game, you will attempt to answer the following questions related to JavaScript.<br />
    When the "Start" button is selected, the timer will begin. Run through each question before<br />
   the timer runs out!</p>
+</heading>
 
 
 <button class="start-button">Start</button>
@@ -25,7 +26,28 @@
 
 <body>
 
-  <div class="card" style="width: 18rem;">
+  
+    <!--Timer-->
+
+
+    <div id= "timer">
+      <div id = "quiz-timer">
+       Timer: 00:00 
+        </div> 
+        <button onclick="stop()">Stop</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div id="stats" style="width: 18rem;">
     <ul style="list-style: none;"> 
       <li class= "scores"></li>
       <li id="my-score">My current score: 0</li>
@@ -45,15 +67,6 @@
 
 
 
-    <!--Timer-->
-
-
-  <div id= "timer">
-    <div id = "quiz-timer">
-     Timer: 00:00 
-      </div> 
-      <button onclick="stop()">Stop</button>
-  </div>
 
 
     <!--Start page-->
