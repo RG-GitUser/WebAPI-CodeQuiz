@@ -3,7 +3,7 @@ var timer;
 var ele = document.getElementById('timer')
 var currentQuestion; 
 
-var answers = ["A","B","C"];
+
 
 
 //Start button 
@@ -11,13 +11,6 @@ var answers = ["A","B","C"];
 var startBtn = document.getElementById("start-btn");
 startBtn.addEventListener("click", startQuiz)
 
-var questionIndex = 0;
-var questionBox = document.getElementById("question-box")
-function startQuiz(){
-    console.log("startquiz")
-    console.log(questions[questionIndex].question)
-    questionBox.textContent = questions[questionIndex].question
-    questionIndex = questionIndex +1 
 
 
 //setting the timer 
@@ -26,8 +19,8 @@ function startQuiz(){
     timer = setInterval(()=>{
        ele.innerHTML = 'Timer: 00:'+sec;
          sec ++; 
-     }, 1000)
-}
+     }, 100)
+
 
 
 
@@ -47,17 +40,42 @@ var questions = [
 },
 {
     question: "what element do we use to create a variable?",
-    answers:[ "A - var", "B - function", "C - variable"],
-    correctAnswer: "" 
+    answers:[ "var", "function", "variable"],
+    correctAnswer: "var" 
 },
 {
-    question: "How can we connect our JavaScript to functionality to the HTML?",
-    answers:[ "var", "function", "variable"],
-    correctAnswer: " var" 
+    question: "How can we connect our JavaScript functionality to the HTML?",
+    answers:[ "Using the elements in HTML", "Adding a link element to our HTML", "Linking JavaScript local file to our type and src"],
+    correctAnswer: "Linking JavaScript local file to our type and src" 
 }
 
 ]
 
+//EXAMPLE
+
+ var questionIndex = 0;
+ var questionBox = document.getElementById("question-one")
+ function startQuiz(){
+     console.log("startquiz")
+     console.log(questions[questionIndex].question)
+     questionBox.textContent = questions[questionIndex].question
+     questionIndex = questionIndex +1 
+ }
+
+
+//First question 
+
+var answerIndex = 0;
+var answerOne = document.getElementById("question-answer")
+answerOne.addEventListener("click", answerQuestion)
+
+function answerQuestion() {
+    console.log("answer one")
+    answerOne.textContent = answers[answerIndex].correctAnswer
+   answerIndex = answerIndex +1 
+    
+
+}
 
 //Win/Lose 
 
@@ -77,7 +95,6 @@ function correctAnswer() {
 
 //event listeners
 
-// currentQuestion.addEventListener("click", nextQuestion);
 
 function nextQuestion() {
   alert ("Correct!");
