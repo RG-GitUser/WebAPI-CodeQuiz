@@ -2,8 +2,13 @@
 
 
 body{
-    font-family: 'Quicksand', sans-serif;
+    
 
+}
+
+
+.quiz-box{
+font-family: 'Courier New', Courier, monospace;
 }
 
 #timer{
@@ -55,8 +60,9 @@ fieldset{
     line-height: 16px;
     max-width: 1000px;
     padding: 10px 32px;
-    border:
-    text-align: center;
-  
-}
+}  
+
+
+
+
 
