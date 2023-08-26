@@ -2,13 +2,16 @@
 
 
 body{
-    
+    font-family: 'Quicksand', sans-serif;
 
 }
 
 
-.quiz-box{
-font-family: 'Courier New', Courier, monospace;
+#quiz-box{
+    margin: 0 auto;
+    max-width: 0 auto;
+    width: auto; 
+    border-radius: 0%;
 }
 
 #timer{

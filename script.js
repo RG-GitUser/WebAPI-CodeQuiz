@@ -1,27 +1,32 @@
 //declaring variables
 var timer; 
 var ele = document.getElementById('timer')
+var currentQuestion; 
 
 var answers = ["A","B","C"];
 
+
+//Start button 
+
+var startBtn = document.getElementById("start-btn");
+startBtn.addEventListener("click", startQuiz)
+
+var questionIndex = 0;
+var questionBox = document.getElementById("question-box")
+function startQuiz(){
+    console.log("startquiz")
+    console.log(questions[questionIndex].question)
+    questionBox.textContent = questions[questionIndex].question
+    questionIndex = questionIndex +1 
+
+
 //setting the timer 
 
-var startBtn = document.getElementsByClassName("start-button");
-startBtn[0].addEventListener("start", function(){
-    console.log("started")
-})
-
-var stopBtn = document.getElementsByClassName("stop-button");
-stopBtn[0].addEventListener('click', function(){
-    console.log("stopped")
-})
-
-function startQuiz(){
     var sec = 0; 
     timer = setInterval(()=>{
-        ele.innerHTML = '00:'+sec;
-        sec ++; 
-    }, 1000)
+       ele.innerHTML = 'Timer: 00:'+sec;
+         sec ++; 
+     }, 1000)
 }
 
 
@@ -31,7 +36,27 @@ function pause(){
     clearInterval(timer); 
 }
   
+//questions 
 
+var questions = [
+    {
+
+    question: "JavaScript is used for...",
+    answers: [ "Making our webpage look shiny", "Structuring our webpage", "Adding functinoality to our webapage"],
+    correctAnswer: "Adding functionality to our webpage" 
+},
+{
+    question: "what element do we use to create a variable?",
+    answers:[ "A - var", "B - function", "C - variable"],
+    correctAnswer: "" 
+},
+{
+    question: "How can we connect our JavaScript to functionality to the HTML?",
+    answers:[ "var", "function", "variable"],
+    correctAnswer: " var" 
+}
+
+]
 
 
 //Win/Lose 
@@ -50,23 +75,25 @@ function correctAnswer() {
 
 
 
-//questions
-
-
-
 //event listeners
 
+// currentQuestion.addEventListener("click", nextQuestion);
 
-document.getElementById('button').onclick = function() {
-
-
+function nextQuestion() {
+  alert ("Correct!");
 }
 
 
+// document.getElementById('button').onclick = function() {
 
-let timeLeft = document.querySelector(".time-left");
-let quizContainer = document.getElementById("container");
-let nextBtn = document.getElementById("next-button");
-let countOfQuestion = document.querySelector(".number-of-question");
-let displayContainer = document.getElementById("display-container");
+
+
+
+
+
+
+
+
+
+
 

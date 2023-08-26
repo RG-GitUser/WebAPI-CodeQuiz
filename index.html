@@ -29,14 +29,13 @@
   
     <!--Timer/Start-->
     
-    <button onclick="startQuiz()">Start</button>
+    <button id="start-btn">Start</button>
 
 
     <div id= "timer">
       <div id = "quiz-timer">
        Timer: 00:00 
-        </div> 
-        <button onclick="stopQuiz()">Stop</button>
+      </div> 
     </div>
 
 <!--scores-->
@@ -51,17 +50,26 @@
 
 
   <!---Questions-->
-
+<div id = "question-box"></div>
       <h2>Question One</h2>
     <fieldset>
       <h4>JavaScript is used for...</h4>
-      <label for="radio-1">A - Making our webpage look shiny </label>
-      <input type="radio" name="radio-1" id="radio-1">
-      <label for="radio-2">B - Structuring our webpage </label>
-      <input type="radio" name="radio-1" id="radio-2">
-      <label for="radio-3">C - Adding functionality to our webpage</label>
-      <input type="radio" name="radio-1" id="radio-3">
+      <button id="optionA">A - Making our webpage look shiny </button>
+      <button id="optionB">B - Structuring our webpage </button>
+      <button id="optionC">C - Adding functionality to our webpage</button>
     </fieldset>
+
+
+    <h2>Question Two</h2> 
+    <fieldset> 
+      <h4>What element do we use to create a variable?</h4>
+      <button id="option-a">A - var</button>
+      <button id="option-b">B - function</button>
+      <button id="option-c">C - variable</button>
+
+    </fieldset>
+
+
  </area> 
 
                 
