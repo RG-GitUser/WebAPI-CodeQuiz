@@ -11,77 +11,66 @@
 </head>
 
 
-
-<!--Introduction to game -->
-
-<heading class = "intro"> 
- <h1> JavaScript Quiz! </h1>
-
- <p>In this game, you will attempt to answer the following questions related to JavaScript.<br />
-   When the "Start" button is selected, the timer will begin. Run through each question before<br />
-  the timer runs out!</p>
-</heading>
-
-
 <body>
-
-
-
   
   <area class = "quiz-box">
 
-  
-    <!--Timer/Start-->
-    
-    <button id="start-btn">Start</button>
+  <!--start button-->
+
+  <button onclick="startQuiz()">Start</button>
 
 
-    <div id= "timer">
-      <div id = "quiz-timer">
-       Timer: 00:00 
-      </div> 
-    </div>
+
+
+
+    <!--Timer-->
+
+<div class="container">
+  <h1 class ="intro">JavaScript Quiz!</h1>
+  <h2 id="timer-start"></h2>
+      <p id="start"></p>
+</div>
+
+ <!--Timer-->
+
+
+ <div id= "timer">
+   <div id = "quiz-timer">
+    Timer: 00:00 
+     </div> 
+   </div> 
+ </div>
 
 <!--scores-->
 
-  <div id="stats" style="width: 18rem;">
-    <ul style="list-style: none;"> 
-      <li class= "scores"></li>
-      <li id="my-score">My current score: 0</li>
-      <li id="overall-score">Overall score: 0</li>
-    </ul>
-  </div>
 
 
-  <!---Questions-->
+<!---Questions-->
+
 <div id = "question-box"></div>
-
-<div id = "question-one"> First Question</div>
-
-<butotn id = "question-answer">click</button>
-
-
-
-      <!-- <h2>Question One</h2>
-    <fieldset>
-      <h4>JavaScript is used for...</h4>
-      <button id="optionA">Making our webpage look shiny </button>
-      <button id="optionB">Structuring our webpage </button>
-      <button id="optionC">Adding functionality to our webpage</button>
-    </fieldset>
+   <h2>Question One</h2>
+ <fieldset>
+   <h4>JavaScript is used for...</h4>
+   <button id="optionA">Making our webpage look shiny </button>
+   <button id="optionB">Structuring our webpage </button>
+   <button id="optionC">Adding functionality to our webpage</button>
+ </fieldset>
 
 
-    <h2>Question Two</h2> 
-    <fieldset> 
-      <h4>What element do we use to create a variable?</h4>
-      <button id="option-a">A - var</button>
-      <button id="option-b">B - function</button>
-      <button id="option-c">C - variable</button>
+ <h2>Question Two</h2> 
+ <fieldset> 
+   <h4>What element do we use to create a variable?</h4>
+   <button id="option-a">var</button>
+   <button id="option-b">function</button>
+   <button id="option-c">variable</button>
 
-    </fieldset> --> 
+ </fieldset>
 
 
- </area> 
+</area> 
+
+
+
 
                 
 
