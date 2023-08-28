@@ -35,13 +35,6 @@ timer = setInterval =(()=>{
 
 
 
-}
-
-
-
-
-
-
 //questions 
 
 var questions = [
